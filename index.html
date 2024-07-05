@@ -533,19 +533,19 @@
             </div>
             <div class="row">
                <div class="col-md-6 padding_right0" style="margin-top: 10px;">
-                  <form id="request" class="main_form" action="/api/sendEmail" method="POST" onsubmit="return validateForm()">
+                  <form id="contactForm">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                           <input class="contactus" placeholder="Name" type="type" name="Name" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           <input class="contactus" placeholder="Email" type="type" name="Email" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="PhoneNumber">                          
+                           <input class="contactus" placeholder="Phone Number" type="type" name="PhoneNumber" required>                          
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" name="Message"></textarea>
+                           <textarea class="textarea" placeholder="Message" type="type" name="Message" required></textarea>
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Send</button>
@@ -638,6 +638,7 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="api/formHandler.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script>
          function validateForm() {
              var name = document.forms["request"]["Name"].value;
