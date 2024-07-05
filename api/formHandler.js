@@ -13,7 +13,7 @@ $(document).ready(function() {
             success: function(response) {
                 if (response.message === 'Email sent successfully') {
                     // Redirect to send.html on success
-                    window.location.href = 'send.html';
+                    window.location.href = 'sent.html';
                 } else {
                     // Display error message
                     $('#result').text('Failed to send email: ' + response.message);
