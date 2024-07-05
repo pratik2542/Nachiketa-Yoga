@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#contactForm').on('submit', function(event) {
+    $('#request').on('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
         // Serialize form data
