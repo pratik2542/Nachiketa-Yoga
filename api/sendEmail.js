@@ -1,11 +1,8 @@
-// api/sendEmail.js
 const nodemailer = require('nodemailer');
+require('dotenv').config(); // Load .env file
 
-// Load environment variables
-const smtpUser = process.env.SMTP_USER; // 'your_email@gmail.com'
-const smtpPass = process.env.SMTP_PASS; // 'your_email_password_or_app_password'
-
-export default async (req, res) => {
+// Function to send email
+async function sendEmail(req, res) {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
     }
@@ -16,10 +13,11 @@ export default async (req, res) => {
         return res.status(400).json({ message: 'All fields are required' });
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(Email)) {
-        return res.status(400).json({ message: 'Invalid email format' });
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+
+    if (!smtpUser || !smtpPass) {
+        return res.status(500).json({ message: 'SMTP credentials are missing' });
     }
 
     // Create a transporter
@@ -41,13 +39,13 @@ export default async (req, res) => {
         html: `<p>Name: ${Name}</p><p>Email: ${Email}</p><p>Phone Number: ${PhoneNumber}</p><p>Message: ${Message}</p>`
     };
 
-    // Send the email
     try {
         await transporter.sendMail(mailOptions);
         res.status(200).json({ message: 'Email sent successfully' });
-        header("Location: sent.html");
     } catch (error) {
         console.error('Error sending email:', error);
         res.status(500).json({ message: 'Failed to send email', error: error.toString() });
     }
-};
+}
+
+module.exports = sendEmail;
