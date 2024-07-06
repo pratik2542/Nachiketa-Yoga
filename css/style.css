@@ -638,6 +638,14 @@ button {
      margin: 0 0;
 }
 
+.centerland {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    
+ }
+
+
 .about_img figure {
      margin: 0;
 }
