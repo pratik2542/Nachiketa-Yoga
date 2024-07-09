@@ -727,11 +727,18 @@
             });
         </script>
             <script>
-               $(document).ready(function() {
-                   $('.navbar-nav>li>a').on('click', function() {
-                       $('.navbar-collapse').collapse('hide');
-                   });
-               });
+              $(document).ready(function() {
+    // Collapse the navbar when clicking on a nav link
+    $('.navbar-nav>li>a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+
+    // Ensure toggle button works correctly for showing and hiding the menu
+    $('.main-layout').on('click', function() {
+        $('.navbar-collapse').collapse('toggle');
+    });
+});
+
            </script>
          
    </body>
