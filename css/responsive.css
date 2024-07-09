@@ -325,7 +325,7 @@
         background: #001935;
         padding: 20px;
         margin-top: -5px;
-        position: absolute;
+        position: fixed;
         width: 100%;
         z-index: 999;
     }

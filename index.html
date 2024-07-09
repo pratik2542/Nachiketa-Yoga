@@ -32,6 +32,33 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="js/formHandler.js"></script>
+      <style>
+         /* Your existing CSS */
+         
+         /* Scroll to Top Button */
+         .scroll-to-top {
+             position: fixed;
+             bottom: 30px;
+             right: 30px;
+             display: none;
+             width: 50px;
+             height: 50px;
+             background-color: #001935;
+             color: #fff;
+             text-align: center;
+             line-height: 50px;
+             font-size: 24px;
+             cursor: pointer;
+             border-radius: 50%;
+             z-index: 1000;
+             transition: background-color 0.3s, opacity 0.3s;
+         }
+ 
+         .scroll-to-top:hover {
+             background-color: #f4a111;
+             opacity: 0.8;
+         }
+     </style>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -58,7 +85,7 @@
                   </div>
                   <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                      <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" style="position: fixed; right: 10px; top: 75px; z-index: 1000;" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
@@ -675,6 +702,37 @@
              return true; // If all validations pass
          }
          </script>
+          <div class="scroll-to-top" id="scrollToTop">
+            ↑
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Show or hide the scroll-to-top button
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > $(window).height() / 2) {
+                        $('#scrollToTop').fadeIn();
+                    } else {
+                        $('#scrollToTop').fadeOut();
+                    }
+                });
+    
+                // Scroll to the top when the button is clicked
+                $('#scrollToTop').click(function() {
+                    $('html, body').animate({ scrollTop: 0 }, 600);
+                    return false;
+                });
+            });
+        </script>
+            <script>
+               $(document).ready(function() {
+                   $('.navbar-nav>li>a').on('click', function() {
+                       $('.navbar-collapse').collapse('hide');
+                   });
+               });
+           </script>
          
    </body>
 </html>
