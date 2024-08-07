@@ -209,11 +209,6 @@ button {
 }
 
 .full {
-     float: left;
-     width: 100%;
-}
-
-.full {
      width: 100%;
      float: left;
      margin: 0;
@@ -263,7 +258,7 @@ button {
     .logo::before {
         position: absolute;
         content: "";
-        top: -25px;
+        top: -15px;
         background: url(../images/lo_be.png);
         width: 310px;
         height: 138px;
@@ -282,7 +277,7 @@ button {
 
 .navigation.navbar-dark .navbar-nav .nav-link {
      padding: 9px 22px;
-     color: #000000;
+     color: #ffffff;
      font-size: 16px;
      line-height: 20px;
      font-weight: 500;
@@ -291,7 +286,7 @@ button {
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     background: #ffffff;
+     background: #f4a111;
      border-radius: 6px;
 }
 
@@ -299,7 +294,7 @@ button {
 .navigation.navbar-dark .navbar-nav .nav-link.active,
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
-     background: #ffffff;
+     background: #f4a111;
      border-radius: 6px;
 }
 
@@ -311,6 +306,9 @@ button {
      width: 100%;
      height: 116px;
      padding: 15px 30px;
+     position: relative;
+     overflow: hidden; /* Ensure no overflow from particles */
+     z-index: 1;
 }
 
 .clipped-img {
@@ -323,7 +321,7 @@ button {
 /** banner section **/
 
 .full_bg {
-     background: url(../images/PhotoRoomfrnt.png);
+     /*background: url(../images/PhotoRoomfrnt.png);*/
      background-size: 100% 100%;
      background-position: center;
      background-repeat: no-repeat;
@@ -332,10 +330,14 @@ button {
 .banner_main {
      position: relative;
      padding-bottom: 100px;
+     align-items: center;
+     justify-content: center;
+   
+    
 }
 
 .yoga_box {
-     text-align: left;
+     text-align: center;
      padding-top: 18%;
 }
 
@@ -344,7 +346,7 @@ button {
 }
 
 .yoga_box span {
-     color: #fff;
+     color: #eeeeee;
      font-size: 28px;
      line-height: 20px;
      font-weight: bold;
@@ -353,7 +355,7 @@ button {
 .yoga_box h1 {
      font-size: 150px;
      font-weight: bold;
-     color: #0b0b0b;
+     color: #eeeeee;
      line-height: 150px;
 }
 .yo_img figure {margin: 0;}
@@ -363,7 +365,7 @@ button {
 }
 
 .yoga_box .yoga_btn {
-     float: left;
+     
      font-size: 18px;
      padding: 15px 0;
      text-transform: uppercase;
@@ -395,7 +397,7 @@ button {
 }
 
 #myCarousel .carousel-control-next {
-     right: 25%;
+     right:1%;
 }
 
 .carousel-indicators {
@@ -454,6 +456,20 @@ button {
      transition: ease-in all 0.5s;
      font-weight: 500;
 }
+
+.read_more_head {
+     font-size: 17px;
+     background-color: #eeeeee;
+     color: #000000;
+     padding: 9px 0px;
+     width: 100%;
+     max-width: 177px;
+     text-align: center;
+     display: inline-block;
+     transition: ease-in all 0.5s;
+     font-weight: 500;
+}
+
 
 .read_more:hover {
      background: #f4a111;
@@ -1234,4 +1250,63 @@ ul.social_icon li a:hover {
 
 .inner_page .blog {
      margin-top: 90px;
+}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+/* ---- stats.js ---- */
+
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+  
+  background-color: #000000;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute; /* Use fixed to keep it in place */
+  width: 100%;
+  height: 60vh; /* Use viewport height to cover the full height of the viewport */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Ensure it is behind other content */
 }

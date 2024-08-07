@@ -32,6 +32,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="js/formHandler.js"></script>
+      
+
       <style>
          /* Your existing CSS */
          
@@ -69,8 +71,10 @@
       
       <!-- end loader -->
       <!-- header -->
-      <header class="full_bg">
-         <!-- header inner -->
+      <div>
+      <header>
+         <div id="particles-js" ></div>
+      <!-- header inner -->
          <div class="header">
             <div class="container-fluid">
                <div class="row">
@@ -111,7 +115,7 @@
                               </li>
 
                               <li class="nav-item">
-                                 <a class="nav-link" href="#contact">Contact Us</a>
+                                 <a class="nav-link" href="#contact">Contact</a>
                               </li>
                            </ul>
                         </div>
@@ -144,7 +148,7 @@
                                  <div class="yoga_box">
                                     <span>Now started</span>
                                     <h1> <strong>Y</strong> O <strong>G</strong> A</h1>
-                                    <a class="read_more yoga_btn" href="#contact" role="button">Contact us</a>
+                                    <a class="read_more_head yoga_btn" href="#contact" role="button">Contact us</a>
                                  </div>
                               </div>
                            </div>
@@ -164,7 +168,7 @@
                                  <div class="yoga_box">
                                     <span>Maintain</span>
                                     <h1> <strong>HE</strong>AL<strong>T</strong>H</h1>
-                                    <a class="read_more yoga_btn" href="#classes" role="button">Our Classes</a>
+                                    <a class="read_more_head yoga_btn" href="#classes" role="button">Our Classes</a>
                                  </div>
                               </div>
                            </div>
@@ -184,7 +188,7 @@
                                  <div class="yoga_box">
                                     <span>Relieve</span>
                                     <h1> <strong>ST</strong>RE<strong>S</strong>S</h1>
-                                    <a class="read_more yoga_btn " href="#pictures" role="button">Our Culture</a>
+                                    <a class="read_more_head yoga_btn " href="#pictures" role="button">Our Culture</a>
                                  </div>
                               </div>
                            </div>
@@ -203,6 +207,7 @@
             </div>
          </section>
       </header>
+   </div>
       <!-- end banner -->
       <!-- our classes -->
       <div class="classes">
@@ -620,8 +625,8 @@
                   <div class="col-lg-4 offset-mdlg-2     col-md-4 offset-md-1" style="margin-bottom: 50px;">
                      <h3>Contact </h3>
                      <ul class="conta link_menu">
-                        <li><a href="https://maps.app.goo.gl/GKxfXuKrt9ZcshgA8"> <i class="fa fa-map-marker" aria-hidden="true"></i>Location</a></li>
-                        <li> <a href="https://mail.google.com/mail/u/4/#inbox?compose=DmwnWrRlQHZmNbDCffRgftfDrSnFhDPnBpkrDkMXSwwRskqsLpDvZPHXHGMqFSPLrBJqWKkdskhg"><i class="fa fa-envelope" aria-hidden="true"></i>yoga.nachiketa@gmail.com</a></li>
+                        <li><a href="https://maps.app.goo.gl/GKxfXuKrt9ZcshgA8" target="_blank"> <i class="fa fa-map-marker" aria-hidden="true"></i>Location</a></li>
+                        <li> <a href="https://mail.google.com/mail/u/4/#inbox?compose=DmwnWrRlQHZmNbDCffRgftfDrSnFhDPnBpkrDkMXSwwRskqsLpDvZPHXHGMqFSPLrBJqWKkdskhg" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i>yoga.nachiketa@gmail.com</a></li>
                         <li><i class="fa fa-mobile" aria-hidden="true"></i> Call : +91 98798 52728</li>
                      </ul>
                      <ul class="social_icon">
@@ -643,7 +648,7 @@
                   <div class="row">
                      <div class="col-md-10 offset-md-1">
                         <div class="footer-content"></div>
-                        <p>Made by  <a href="https://pratiksinh-makwana.vercel.app/">Pratik</a> 
+                        <p>Made by  <a href="https://pratiksinh-makwana.vercel.app/" target="_blank">Pratik</a> 
                         
                            <a href="https://www.facebook.com/pratik.makwana.35912" style="margin-left: 10px;" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                            <a href="https://github.com/pratik2542" style="margin-left: 10px;" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -706,7 +711,9 @@
             ↑
         </div>
     
-        
+        <script src="particles.js"></script>
+      <script src="js/app.js"></script>
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function() {
@@ -731,7 +738,7 @@
     // Collapse the navbar when clicking on a nav link
     $('.navbar-nav>li>a').on('click', function() {
         $('.navbar-collapse').collapse('hide');
-    });
+    }); 
 });
 
            </script>
