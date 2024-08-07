@@ -210,12 +210,13 @@
    </div>
       <!-- end banner -->
       <!-- our classes -->
+      <div class="container-fluid">
       <div class="classes">
          <div class="container">
             <div class="row">
                <div class="col-sm-12">
                   <div class="titlepage">
-                     <h2 style="margin-top: 30px;">Empower Your Mind and Body</h2>
+                     <h2 style="margin-top: 200px;">Empower Your Mind and Body</h2>
                      <span>Make your self flexible
                      </span>
                   </div>
@@ -288,7 +289,7 @@
                </div>
             </div>
          </div>
-      </div>
+      </div></div>
       <!-- end middle -->
        <!-- balance -->
       <div class="newMiddle" style="margin-top: 20px;">
@@ -710,7 +711,17 @@
           <div class="scroll-to-top" id="scrollToTop">
             ↑
         </div>
-    
+        <script>
+         document.querySelectorAll('a.nav-link').forEach(anchor => {
+           anchor.addEventListener('click', function(e) {
+             e.preventDefault();
+     
+             document.querySelector(this.getAttribute('href')).scrollIntoView({
+               behavior: 'smooth'
+             });
+           });
+         });
+       </script>
         <script src="particles.js"></script>
       <script src="js/app.js"></script>
 
