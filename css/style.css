@@ -329,7 +329,7 @@ button {
 
 .banner_main {
      position: relative;
-     padding-bottom: 100px;
+     padding-bottom: 50px;
      align-items: center;
      justify-content: center;
    
@@ -481,7 +481,7 @@ button {
 /** our classes section **/
 
 .classes {
-     padding: 90px 0;
+     padding: 45px 0;
 }
 
 .our_yoga {
