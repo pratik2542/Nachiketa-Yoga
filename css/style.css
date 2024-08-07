@@ -364,7 +364,7 @@ button {
      color: #f4a111;
 }
 
-.yoga_box .yoga_btn {
+.yoga_box .yoga_btn_head {
      
      font-size: 18px;
      padding: 15px 0;
@@ -533,7 +533,7 @@ button {
      height: 60px;
      padding: 15px 0;
      margin-top: 45px;
-     margin-top: 90px !important;
+     margin-top: 70px !important;
      border-radius: 30px;
      margin: 0 auto;
      display: block;
@@ -1316,7 +1316,7 @@ html{
   background-repeat: no-repeat;
   position: absolute; /* Use fixed to keep it in place */
   width: 100%;
-  height: 85vh; /* Use viewport height to cover the full height of the viewport */
+  height: 80vh; /* Use viewport height to cover the full height of the viewport */
   top: 0;
   left: 0;
   z-index: 0; /* Ensure it is behind other content */
