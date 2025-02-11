@@ -1,1 +1,47 @@
+# Node modules (Dependencies)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Variables (Sensitive Info )
 .env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Build & Output
+build/
+dist/
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS-Specific Files
+.DS_Store
+Thumbs.db
+
+# Coverage & Testing
+coverage/
+jest/
+cypress/
+
+# Cache & Temp Files
+.cache/
+.eslintcache
+/.pnp
+.pnp.js
+
+# VSCode settings (Optional)
+.vscode/
